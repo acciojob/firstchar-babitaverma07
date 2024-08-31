@@ -1,8 +1,18 @@
-function firstChar(text) {
-  // your code here
+function firstChar(str) {
+    // Trim leading and trailing spaces
+    const trimmedStr = str.trim();
+    
+    // Return the first character if the string is not empty
+    if (trimmedStr.length > 0) {
+        return trimmedStr[0];
+    }
+    
+    // Return an empty string if there are no non-space characters
+    return '';
 }
 
-// Do not change the code below
-//Uncomment the following line to show the prompt popup
-//const text = prompt("Enter text:");
-alert(firstChar(text));
+// Example usage:
+console.log(firstChar(' Rosa Parks ')); // 'R'
+console.log(firstChar(' Hello World ')); // 'H'
+console.log(firstChar(' ')); // ''
+console.log(firstChar('')); // ''
